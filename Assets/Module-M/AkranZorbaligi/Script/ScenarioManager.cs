@@ -44,7 +44,7 @@ public class ScenarioManager : MonoBehaviour
     private int destroyedBadWords = 0;
     private int destroyedGoodWords = 0;
 
-    private int totalBadWords = 7;
+    private int totalBadWords = 8;
     private int totalGoodWords = 7;
 
     private bool victimSequenceStarted = false;
