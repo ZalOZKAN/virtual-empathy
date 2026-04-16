@@ -23,8 +23,8 @@ public class DisleksiManager : MonoBehaviour
     public GameObject infografikButonlari;
 
     [Header("Scary Teacher Oku Ayarlarý")]
-    public Transform okObjesi;              // Senin sarý "Ok_Gövde" objen
-    public Transform[] hedefNoktalari;     // Okun sýrayla bakacaðý yerler
+    public Transform okObjesi;
+    public Transform[] hedefNoktalari;
 
     void Start()
     {
@@ -34,18 +34,12 @@ public class DisleksiManager : MonoBehaviour
 
     void Update()
     {
-        // --- OKUN HEDEFE BAKMA MANTIÐI ---
         if (okObjesi != null && hedefNoktalari != null && tamamlananGorev < hedefNoktalari.Length)
         {
             Transform suAnkiHedef = hedefNoktalari[tamamlananGorev];
             if (suAnkiHedef != null)
             {
-                // Okun hedefe bakmasýný saðlar
                 okObjesi.LookAt(suAnkiHedef);
-
-                // NOT: Ok yan bakýyorsa aþaðýdaki satýrýn baþýndaki // iþaretini kaldýr 
-                // ve 90 rakamýný (180, -90 gibi) deðiþtirerek dene:
-                // okObjesi.Rotate(0, 90, 0); 
             }
         }
     }
@@ -56,7 +50,7 @@ public class DisleksiManager : MonoBehaviour
         if (egitimBasladi) return;
         egitimBasladi = true;
 
-        // Okun ilk hedefine (Tahta) ýþýnlar
+        // Tahtaya bakarak doðmasý için Isinla çaðrýlýyor
         Isinla(hedefNoktalari[0], new Vector3(0, 0.8f, 0));
 
         if (ekstraHarflerGrubu != null)
@@ -66,13 +60,15 @@ public class DisleksiManager : MonoBehaviour
         }
     }
 
-    // --- 2. GÖREV: LAB IÞINLANMA ---
+    // --- 2. GÖREV: TAHTADAKÝ "TAMAM" VEYA "LABA GÝT" BUTONU ---
     public void TahtaBittiLabaGit()
     {
+        // Eðer buton çalýþmýyorsa bu fonksiyona týklandýðýndan emin ol
+        if (tahtaSoruPaneli != null) tahtaSoruPaneli.SetActive(false);
+
         if (tamamlananGorev == 0)
         {
-            if (tahtaSoruPaneli != null) tahtaSoruPaneli.SetActive(false);
-            GoreviTamamla(); // Bu iþlem tamamlananGorev'i artýrýr, ok otomatik döner
+            GoreviTamamla();
             Isinla(hedefNoktalari[1], Vector3.zero);
         }
     }
@@ -88,11 +84,11 @@ public class DisleksiManager : MonoBehaviour
         if (tamamlananGorev == 1)
         {
             if (labSoruSeti2 != null) labSoruSeti2.SetActive(false);
-            GoreviTamamla(); // Ok otomatik olarak 3. hedefe (Ýnfografik) döner
+            GoreviTamamla();
         }
     }
 
-    // --- GENEL IÞINLANMA ---
+    // --- IÞINLANMA VE BAKIÞ YÖNÜ AYARI ---
     void Isinla(Transform hedef, Vector3 yukseklikOffset)
     {
         if (xrOrigin != null && hedef != null)
@@ -100,8 +96,12 @@ public class DisleksiManager : MonoBehaviour
             CharacterController cc = xrOrigin.GetComponent<CharacterController>();
             if (cc != null) cc.enabled = false;
 
+            // POZÝSYON: Hedefin olduðu yere git
             xrOrigin.transform.position = hedef.position + yukseklikOffset;
-            xrOrigin.transform.rotation = hedef.rotation;
+
+            // ROTASYON: Yan yatmayý ve tersliði tamamen bitiren ayar
+            // Sadece Y ekseninde (sað-sol) hedefin baktýðý yöne bak, asla X ve Z'ye dokunma.
+            xrOrigin.transform.rotation = Quaternion.Euler(0, hedef.eulerAngles.y, 0);
 
             if (cc != null) cc.enabled = true;
         }
@@ -118,7 +118,6 @@ public class DisleksiManager : MonoBehaviour
             LeanTween.rotateY(kapilar[kapiIdx], 90f, 2f).setEase(LeanTweenType.easeInOutQuad);
         }
 
-        // Tüm görevler bittiðinde oku kapatýr
         if (tamamlananGorev >= hedefNoktalari.Length && okObjesi != null)
         {
             okObjesi.gameObject.SetActive(false);
@@ -135,7 +134,7 @@ public class DisleksiManager : MonoBehaviour
 
         gorevYazisi.text = tamamlananGorev + "/3 Görev Tamamlandý\n\n" +
                            t1 + " Tahtadaki Harfleri Ýncele\n" +
-                           t2 + " Laboratuvar Görevini Yap\n" +
-                           t3 + " Ýnfografik Odasýný Ýncele";
+                           t2 + " Sorularý Doðru Cevabýný Ýþaretle\n" +
+                           t3 + " Ýnfografikleri Ýncele ve Soruyu Cevapla";
     }
 }
