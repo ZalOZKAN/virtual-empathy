@@ -1,24 +1,37 @@
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
+using TMPro;
 
+/// <summary>
+/// GuideCanvas yöneticisi.
+/// S1 — Karakter seçimi (sprite butonlar)
+/// S2 — İlk izlenim sorusu
+/// S3 — Geçiş yanıtı + Devam Et
+/// </summary>
 public class BotPanelController : MonoBehaviour
 {
-    [Header("UI Referanslar")]
+    [Header("Ortak UI")]
     public TextMeshProUGUI questionText;
-    public GameObject buttonGroup;
-    public TextMeshProUGUI botResponseText;
-    public GameObject continueButton;
 
-    [Header("Butonlar")]
+    [Header("S1 — Karakter Sprite Butonları")]
+    public GameObject charSelectGroup;
+    public Button btnCharA;
+    public Button btnCharB;
+    public Button btnCharC;
+
+    [Header("S2 — Metin Seçenekleri")]
+    public GameObject optionGroup;
     public Button optionA;
     public Button optionB;
     public Button optionC;
-
-    [Header("Buton Metinleri")]
     public TextMeshProUGUI optionAText;
     public TextMeshProUGUI optionBText;
     public TextMeshProUGUI optionCText;
+
+    [Header("S3 — Geçiş Yanıtı")]
+    public GameObject responseGroup;
+    public TextMeshProUGUI botResponseText;
+    public Button continueButton;
 
     [Header("Ses")]
     public AudioSource botVoice;
@@ -26,93 +39,111 @@ public class BotPanelController : MonoBehaviour
     public AudioClip firstImpressClip;
     public AudioClip responseClip;
 
-    private int currentMode = 0;
+    [Header("Referanslar")]
+    public CanvasFollower canvasFollower;
+    public CharacterSelectManager charSelectManager;
 
     void Awake()
-    {
-        optionA.onClick.AddListener(() => OnOptionSelected(0));
-        optionB.onClick.AddListener(() => OnOptionSelected(1));
-        optionC.onClick.AddListener(() => OnOptionSelected(2));
-    }
+{
+    if (btnCharA) btnCharA.onClick.AddListener(() => OnCharSelected(0));
+    if (btnCharB) btnCharB.onClick.AddListener(() => OnCharSelected(1));
+    if (btnCharC) btnCharC.onClick.AddListener(() => OnCharSelected(2));
 
+    if (optionA) optionA.onClick.AddListener(() => OnOptionSelected(0));
+    if (optionB) optionB.onClick.AddListener(() => OnOptionSelected(1));
+    if (optionC) optionC.onClick.AddListener(() => OnOptionSelected(2));
+
+    if (continueButton) continueButton.onClick.AddListener(OnContinuePressed);
+}
+
+    // ── S1 ─────────────────────────────────────────────────
     public void ShowCharacterSelect()
     {
-        currentMode = 0;
+         Debug.Log("[BotPanel] ShowCharacterSelect çağrıldı");
         questionText.text =
             "Masadaki kişilerden hangisi dikkatini çekti?\n" +
-            "Seçimine dikkat et — bilmediğin şeyleri öğrenebilirsin.";
-        optionAText.text = "\"Sabah merhaba bile demedi\" dediğin kişi";
-        optionBText.text = "\"Toplantıda hiç yoktu\" dediğin kişi";
-        optionCText.text = "\"Soğuk biri\" dediğin kişi";
+            "Seni görmediğin bir tarafla karşı karşıya bırakabilir.";
 
-        if (botResponseText != null)
-            botResponseText.gameObject.SetActive(false);
-        if (continueButton != null)
-            continueButton.SetActive(false);
-        if (buttonGroup != null)
-            buttonGroup.SetActive(true);
-
-        if (botVoice != null && charSelectClip != null)
-        {
-            botVoice.clip = charSelectClip;
-            botVoice.Play();
-        }
-
-        gameObject.SetActive(true);
+        SetGroups(s1: true, s2: false, s3: false);
+        PlayClip(charSelectClip);
+        Open();
     }
 
+    public void OnCharSelected(int index)
+{
+    Debug.Log($"[BotPanel] Karakter seçildi: {index}");
+    gameObject.SetActive(false);
+    charSelectManager.SelectCharacter(index);
+}
+
+    // ── S2 ─────────────────────────────────────────────────
     public void ShowFirstImpression()
     {
-        currentMode = 1;
         questionText.text = "Bu kişi hakkında ilk izlenimin nedir?";
-        optionAText.text = "Dalgın görünüyor";
-        optionBText.text = "Soğuk ve mesafeli görünüyor";
-        optionCText.text = "Yorgun olabilir";
+        optionAText.text  = "Dalgın görünüyor";
+        optionBText.text  = "Soğuk ve mesafeli görünüyor";
+        optionCText.text  = "Yorgun olabilir";
 
-        if (botResponseText != null)
-            botResponseText.gameObject.SetActive(false);
-        if (continueButton != null)
-            continueButton.SetActive(false);
-        if (buttonGroup != null)
-            buttonGroup.SetActive(true);
-
-        if (botVoice != null && firstImpressClip != null)
-        {
-            botVoice.clip = firstImpressClip;
-            botVoice.Play();
-        }
+        SetGroups(s1: false, s2: true, s3: false);
+        PlayClip(firstImpressClip);
+        Open();
     }
 
-    public void OnOptionSelected(int index)
+    void OnOptionSelected(int index)
     {
-        buttonGroup.SetActive(false);
-
-        if (currentMode == 0)
-        {
-            FindFirstObjectByType<CharacterSelectManager>()
-                .SelectCharacter(index);
-            gameObject.SetActive(false);
-        }
-        else
-        {
-            botResponseText.text =
-                "Öyle mi? Hadi bir bakalım. Şimdi kendini onun " +
-                "yerine koy ve aynı anı onun gözlerinden deneyimle.";
-            botResponseText.gameObject.SetActive(true);
-
-            if (botVoice != null && responseClip != null)
-            {
-                botVoice.clip = responseClip;
-                botVoice.Play();
-            }
-
-            Invoke(nameof(ShowContinue), 2f);
-        }
+        // Cevap farketmiyor, S3'e geç
+        ShowTransition();
     }
 
-    void ShowContinue()
+    // ── S3 ─────────────────────────────────────────────────
+    void ShowTransition()
     {
-        if (continueButton != null)
-            continueButton.SetActive(true);
+        botResponseText.text =
+            "Öyle mi? Hadi bir bakalım.\n" +
+            "Şimdi kendini onun yerine koy ve\n" +
+            "aynı anı onun gözlerinden deneyimle.";
+
+        continueButton.gameObject.SetActive(false);
+        SetGroups(s1: false, s2: false, s3: true);
+        PlayClip(responseClip);
+
+        // Ses bitince + 0.5sn "Devam Et" göster
+        float delay = (botVoice != null && responseClip != null)
+            ? responseClip.length + 0.5f
+            : 2f;
+        Invoke(nameof(ShowContinueButton), delay);
+        Open();
+    }
+
+    void ShowContinueButton()
+    {
+        continueButton.gameObject.SetActive(true);
+    }
+
+    void OnContinuePressed()
+    {
+        gameObject.SetActive(false);
+        charSelectManager.OnContinueToInnerVoice();
+    }
+
+    // ── Yardımcı ───────────────────────────────────────────
+    void SetGroups(bool s1, bool s2, bool s3)
+    {
+        if (charSelectGroup != null) charSelectGroup.SetActive(s1);
+        if (optionGroup     != null) optionGroup.SetActive(s2);
+        if (responseGroup   != null) responseGroup.SetActive(s3);
+    }
+
+    void PlayClip(AudioClip clip)
+    {
+        if (botVoice == null || clip == null) return;
+        botVoice.clip = clip;
+        botVoice.Play();
+    }
+
+    void Open()
+    {
+        gameObject.SetActive(true);
+        canvasFollower?.SnapToCamera();
     }
 }

@@ -52,21 +52,76 @@ TemporaryDependencyNodeTargetIdentifier=netstandard2.1
 /warnaserror+:NU1605
 
 [sourceFiles]
+Assets/Module-M/AkranZorbaligi/Script/
+ HeartTrigger.cs
+ ScenarioManager.cs
+ TrashTrigger.cs
+ VictimTrigger.cs
+Assets/Module-R/Art/LeanTween/Examples/Scripts/
+ Following.cs
+ GeneralAdvancedTechniques.cs
+ GeneralBasic.cs
+ GeneralBasics2d.cs
+ GeneralCameraShake.cs
+ GeneralEasingTypes.cs
+ GeneralEventsListeners.cs
+ GeneralSequencer.cs
+ GeneralSimpleUI.cs
+ GeneralUISpace.cs
+ LogoCinematic.cs
+ PathBezier.cs
+ PathBezier2d.cs
+ PathSpline.cs
+ PathSpline2d.cs
+ PathSplineEndless.cs
+ PathSplinePerformance.cs
+ PathSplines.cs
+ PathSplineTrack.cs
+ TestingUnitTests.cs
+ TestingZLegacy.cs
+ TestingZLegacyExt.cs
+Assets/Module-R/Art/LeanTween/Framework/
+ LeanAudio.cs
+ LeanSmooth.cs
+ LeanTest.cs
+ LeanTween.cs
+ LeanTweenExt.cs
+ LTDescr.cs
+ LTDescrOptional.cs
+ LTSeq.cs
+Assets/Module-R/Art/LeanTween/Testing/
+ FollowingTests.cs
+ PerformanceTests.cs
+ Scripts/LeanPool.cs
+ Testing240.cs
+ Testing243.cs
+ Testing246.cs
+ Testing248.cs
+ TestingColorTweening.cs
+ TestingDescr.cs
+ TestingIssue.cs
+ TestingIssue2.cs
+ TestingMaxTweens.cs
+ TestingOptionalCancel.cs
+ TestingRotate.cs
+ TestingSceneSwitching.cs
+ TestingSequencer.cs
+Assets/Module-R/Scripts/
+ DisleksiManager.cs
+ HarfDansi.cs
+ HarfUcurucu.cs
+ InfografikInceleme.cs
+ LabGorevKontrol.cs
+ MissionManager.cs
+ VRButton.cs
 Assets/Module-Z/Scripts/
+ BannerController.cs
  BotPanelController.cs
+ CanvasFollower.cs
  CharacterSelectManager.cs
  ChatBotController.cs
- FirebaseManager1.cs
- GameManager.cs
+ ExitController.cs
  InnerVoiceController.cs
- Menu/
-  denememenu.cs
-  MenuSelected.cs
-  RadialMenu.cs
- ModuleFlowController.cs
- ModuleMenuController.cs
- PresentationController.cs
- QuizManager.cs
  SonderVoiceoverController.cs
 Assets/VRTemplateAssets/Scripts/
  AnchorVisuals.cs
@@ -364,6 +419,8 @@ Library/ScriptAssemblies/
  glTFast.dots.dll
  glTFast.Editor.dll
  PPv2URPConverters.dll
+ Unity.2D.Sprite.AIIntegration.Editor.dll
+ Unity.2D.Sprite.Editor.dll
  Unity.Burst.dll
  Unity.Burst.Editor.dll
  Unity.Cinemachine.dll
