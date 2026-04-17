@@ -15,74 +15,65 @@ public class CharacterSelectManager : MonoBehaviour
     public AudioClip whooshClip;
 
     [Header("UI Referanslar")]
-    public BotPanelController botPanelController;
     public GameObject returnButton;
-
-    [Header("Badge Objeleri")]
-    public GameObject badgeA;
-    public GameObject badgeB;
-    public GameObject badgeC;
-
-    [Header("Banner Controller'lar (size: 6)")]
-    public BannerController[] bannerControllers;
+    public BotPanelController botPanelController;
 
     private CinemachineCamera[] charCams;
     private int selectedIndex = -1;
-    private bool[] visited = new bool[3];
+    private bool[] visitedChars = new bool[3];
     private int visitedCount = 0;
 
     void Start()
     {
         charCams = new CinemachineCamera[] { camA, camB, camC };
-        ResetAllCams();
+        ResetAllCameras();
         camObserver.Priority = 10;
-        SetBadge(0, false); SetBadge(1, false); SetBadge(2, false);
-        Invoke(nameof(ShowBotPanel), 2f);
+        Invoke(nameof(ShowBotPanel), 3f);
     }
 
-    void ShowBotPanel() { botPanelController.ShowCharacterSelect(); }
+    void ShowBotPanel()
+    {
+        botPanelController.ShowCharacterSelect();
+    }
 
     public void SelectCharacter(int index)
     {
         selectedIndex = index;
-        PlayWhoosh();
-        RefreshBanners(index);
+
+        if (whooshClip != null)
+        {
+            transitionAudio.clip = whooshClip;
+            transitionAudio.Play();
+        }
+
         charCams[index].Priority = 20;
-        Invoke(nameof(ShowFirstImpression), 1.8f);
-    }
-
-    void ShowFirstImpression() { botPanelController.ShowFirstImpression(); }
-
-    public void OnContinueToInnerVoice()
-    {
-        PlayWhoosh();
-        Invoke(nameof(TriggerInnerVoice), 0.5f);
+        Invoke(nameof(TriggerInnerVoice), 1.8f);
     }
 
     void TriggerInnerVoice()
     {
-        FindFirstObjectByType<InnerVoiceController>().PlayInnerVoice(selectedIndex);
-    }
-
-    public void OnInnerVoiceFinished()
-    {
-        if (returnButton != null) returnButton.SetActive(true);
+        FindFirstObjectByType<InnerVoiceController>()
+            .PlayInnerVoice(selectedIndex);
     }
 
     public void ExitCharacter()
     {
-        if (!visited[selectedIndex])
+        if (!visitedChars[selectedIndex])
         {
-            visited[selectedIndex] = true;
+            visitedChars[selectedIndex] = true;
             visitedCount++;
-            SetBadge(selectedIndex, true);
-            RefreshBanners(-1);
         }
-        ResetAllCams();
+
+        ResetAllCameras();
         camObserver.Priority = 10;
-        if (returnButton != null) returnButton.SetActive(false);
-        if (visitedCount >= 3) Invoke(nameof(TriggerSonder), 2f);
-        else Invoke(nameof(ShowBotPanel), 1.5f);
+
+        if (returnButton != null)
+            returnButton.SetActive(false);
+
+        if (visitedCount >= 3)
+            Invoke(nameof(TriggerSonder), 2f);
+        else
+            Invoke(nameof(ShowBotPanel), 1.5f);
     }
 
     void TriggerSonder()
@@ -90,28 +81,10 @@ public class CharacterSelectManager : MonoBehaviour
         FindFirstObjectByType<SonderVoiceoverController>().PlaySonder();
     }
 
-    void ResetAllCams()
+    void ResetAllCameras()
     {
         camObserver.Priority = 0;
-        foreach (var c in charCams) if (c != null) c.Priority = 0;
+        foreach (var cam in charCams) cam.Priority = 0;
         if (camSonder != null) camSonder.Priority = 0;
-    }
-
-    void PlayWhoosh()
-    {
-        if (transitionAudio != null && whooshClip != null)
-        { transitionAudio.clip = whooshClip; transitionAudio.Play(); }
-    }
-
-    void SetBadge(int index, bool active)
-    {
-        GameObject[] badges = { badgeA, badgeB, badgeC };
-        if (badges[index] != null) badges[index].SetActive(active);
-    }
-
-    public void RefreshBanners(int activeIndex)
-    {
-        foreach (var b in bannerControllers)
-            if (b != null) b.Refresh(activeIndex, visited);
     }
 }

@@ -52,16 +52,21 @@ TemporaryDependencyNodeTargetIdentifier=netstandard2.1
 /warnaserror+:NU1605
 
 [sourceFiles]
-Assets/Module-Z/Module-Z/Scripts/
- BannerController.cs
+Assets/Module-Z/Scripts/
  BotPanelController.cs
- CanvasFollower.cs
  CharacterSelectManager.cs
  ChatBotController.cs
- EditorTestController.cs
- ExitController.cs
+ FirebaseManager1.cs
  GameManager.cs
  InnerVoiceController.cs
+ Menu/
+  denememenu.cs
+  MenuSelected.cs
+  RadialMenu.cs
+ ModuleFlowController.cs
+ ModuleMenuController.cs
+ PresentationController.cs
+ QuizManager.cs
  SonderVoiceoverController.cs
 Assets/VRTemplateAssets/Scripts/
  AnchorVisuals.cs
