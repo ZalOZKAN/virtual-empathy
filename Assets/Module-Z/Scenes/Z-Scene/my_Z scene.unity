@@ -229,7 +229,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 149.20001, y: -60.600037}
+=======
+  m_AnchoredPosition: {x: 152, y: -125.7}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &22569854
@@ -251,7 +255,10 @@ GameObject:
   - component: {fileID: 49294399}
   - component: {fileID: 49294401}
   - component: {fileID: 49294400}
+<<<<<<< Updated upstream
   - component: {fileID: 49294402}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: Banner
   m_TagString: Untagged
@@ -321,6 +328,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 49294398}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!114 &49294402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,6 +385,8 @@ RectTransform:
   m_AnchoredPosition: {x: -1, y: -14}
   m_SizeDelta: {x: 567.8, y: 92.70001}
   m_Pivot: {x: 0.5, y: 0.5}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &76568890
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +398,10 @@ GameObject:
   - component: {fileID: 76568891}
   - component: {fileID: 76568893}
   - component: {fileID: 76568892}
+<<<<<<< Updated upstream
   - component: {fileID: 76568894}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: C
   m_TagString: Untagged
@@ -453,6 +466,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76568890}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!225 &76568894
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -465,6 +479,8 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1 &86825906
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +529,10 @@ GameObject:
   - component: {fileID: 91160633}
   - component: {fileID: 91160635}
   - component: {fileID: 91160634}
+<<<<<<< Updated upstream
   - component: {fileID: 91160636}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: B
   m_TagString: Untagged
@@ -578,6 +597,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 91160632}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!225 &91160636
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -590,6 +610,8 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1 &96110424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,8 +1777,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 12, y: -26.4}
   m_SizeDelta: {x: 650, y: 85.9}
+=======
+  m_AnchoredPosition: {x: 12, y: -43}
+  m_SizeDelta: {x: 650, y: 107.7}
+>>>>>>> Stashed changes
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &193307592
 MonoBehaviour:
@@ -1986,6 +2013,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223077152}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!1 &235598839
 GameObject:
   m_ObjectHideFlags: 0
@@ -2123,6 +2151,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235598839}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1 &249016030
 GameObject:
   m_ObjectHideFlags: 0
@@ -2527,7 +2557,10 @@ GameObject:
   - component: {fileID: 266023684}
   - component: {fileID: 266023686}
   - component: {fileID: 266023685}
+<<<<<<< Updated upstream
   - component: {fileID: 266023687}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: Banner
   m_TagString: Untagged
@@ -2597,6 +2630,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266023683}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!114 &266023687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2618,6 +2652,8 @@ MonoBehaviour:
   activeAlpha: 1
   inactiveAlpha: 0.3
   doneAlpha: 0.3
+=======
+>>>>>>> Stashed changes
 --- !u!1 &269649831
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,7 +2665,10 @@ GameObject:
   - component: {fileID: 269649832}
   - component: {fileID: 269649834}
   - component: {fileID: 269649833}
+<<<<<<< Updated upstream
   - component: {fileID: 269649835}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: C
   m_TagString: Untagged
@@ -2694,6 +2733,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269649831}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!225 &269649835
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2706,6 +2746,8 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1 &314191119
 GameObject:
   m_ObjectHideFlags: 0
@@ -3568,7 +3610,10 @@ GameObject:
   - component: {fileID: 395765334}
   - component: {fileID: 395765336}
   - component: {fileID: 395765335}
+<<<<<<< Updated upstream
   - component: {fileID: 395765337}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: B
   m_TagString: Untagged
@@ -3633,6 +3678,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395765333}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!225 &395765337
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3645,6 +3691,8 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1 &401119179
 GameObject:
   m_ObjectHideFlags: 0
@@ -3793,7 +3841,10 @@ GameObject:
   - component: {fileID: 401183394}
   - component: {fileID: 401183396}
   - component: {fileID: 401183395}
+<<<<<<< Updated upstream
   - component: {fileID: 401183397}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: Banner
   m_TagString: Untagged
@@ -3863,6 +3914,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401183393}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!114 &401183397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3884,6 +3936,8 @@ MonoBehaviour:
   activeAlpha: 1
   inactiveAlpha: 0.3
   doneAlpha: 0.3
+=======
+>>>>>>> Stashed changes
 --- !u!1 &414055760 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 928eff03e7b3f3642aeed979f2b914e9, type: 3}
@@ -3952,6 +4006,7 @@ RectTransform:
   m_AnchoredPosition: {x: -1, y: -14}
   m_SizeDelta: {x: 567.8, y: 92.70001}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
 --- !u!1 &470268766
 GameObject:
   m_ObjectHideFlags: 0
@@ -4164,6 +4219,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490713270}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1 &507066864
 GameObject:
   m_ObjectHideFlags: 0
@@ -4253,6 +4310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineHardLockToTarget
   Damping: 0
+<<<<<<< Updated upstream
 --- !u!1 &515403707
 GameObject:
   m_ObjectHideFlags: 0
@@ -4374,6 +4432,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515403707}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1 &515880289
 GameObject:
   m_ObjectHideFlags: 0
@@ -4954,6 +5014,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5219619261763778215, guid: deb43205751c0534e9d32666f4f00123, type: 3}
   m_PrefabInstance: {fileID: 553468872}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &562289123
 GameObject:
   m_ObjectHideFlags: 0
@@ -5029,6 +5090,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562289123}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &569306827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5156,6 +5219,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5801294877515776639, guid: 928eff03e7b3f3642aeed979f2b914e9, type: 3}
+<<<<<<< Updated upstream
 --- !u!1 &571829121
 GameObject:
   m_ObjectHideFlags: 0
@@ -5244,6 +5308,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571829121}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1 &581392996
 GameObject:
   m_ObjectHideFlags: 0
@@ -5554,7 +5620,10 @@ GameObject:
   - component: {fileID: 700352172}
   - component: {fileID: 700352171}
   - component: {fileID: 700352170}
+<<<<<<< Updated upstream
   - component: {fileID: 700352174}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: 5B
   m_TagString: Untagged
@@ -5651,6 +5720,7 @@ RectTransform:
   m_AnchoredPosition: {x: 2.38, y: 1.507}
   m_SizeDelta: {x: 700, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
 --- !u!114 &700352174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5667,6 +5737,8 @@ MonoBehaviour:
   distance: 2
   followSpeed: 5
   verticalOffset: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1 &729198948 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8771091787928289351, guid: 9461a3d0e36407f41800bd56eb32ab84, type: 3}
@@ -5782,8 +5854,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 12, y: -9.2}
   m_SizeDelta: {x: 650, y: 231.3}
+=======
+  m_AnchoredPosition: {x: 12, y: 54}
+  m_SizeDelta: {x: 650, y: 107.7}
+>>>>>>> Stashed changes
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &742027161
 MonoBehaviour:
@@ -6203,6 +6280,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803250077}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!1 &816575707
 GameObject:
   m_ObjectHideFlags: 0
@@ -6279,6 +6357,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816575707}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1 &829459520
 GameObject:
   m_ObjectHideFlags: 0
@@ -6290,7 +6370,10 @@ GameObject:
   - component: {fileID: 829459521}
   - component: {fileID: 829459523}
   - component: {fileID: 829459522}
+<<<<<<< Updated upstream
   - component: {fileID: 829459524}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: Banner
   m_TagString: Untagged
@@ -6360,6 +6443,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829459520}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!114 &829459524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6381,6 +6465,8 @@ MonoBehaviour:
   activeAlpha: 1
   inactiveAlpha: 0.3
   doneAlpha: 0.3
+=======
+>>>>>>> Stashed changes
 --- !u!1 &833456658
 GameObject:
   m_ObjectHideFlags: 0
@@ -6723,7 +6809,11 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
+<<<<<<< Updated upstream
   m_TargetGraphic: {fileID: 859721433}
+=======
+  m_TargetGraphic: {fileID: 0}
+>>>>>>> Stashed changes
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -6940,7 +7030,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 130.8, y: -30}
+=======
+  m_AnchoredPosition: {x: 133.6, y: -95.1}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 427.1, y: 40.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &895410444
@@ -7157,6 +7251,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902635451}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!1 &918093753
 GameObject:
   m_ObjectHideFlags: 0
@@ -7232,6 +7327,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918093753}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1 &934556254
 GameObject:
   m_ObjectHideFlags: 0
@@ -7244,7 +7341,10 @@ GameObject:
   - component: {fileID: 934556257}
   - component: {fileID: 934556256}
   - component: {fileID: 934556255}
+<<<<<<< Updated upstream
   - component: {fileID: 934556259}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: 7
   m_TagString: Untagged
@@ -7333,7 +7433,10 @@ RectTransform:
   - {fileID: 395346102}
   - {fileID: 1954686173}
   - {fileID: 1234261262}
+<<<<<<< Updated upstream
   - {fileID: 1968362576}
+=======
+>>>>>>> Stashed changes
   - {fileID: 86825907}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7342,6 +7445,7 @@ RectTransform:
   m_AnchoredPosition: {x: -3.613, y: 2.696}
   m_SizeDelta: {x: 700, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
 --- !u!114 &934556259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7358,6 +7462,8 @@ MonoBehaviour:
   distance: 2
   followSpeed: 5
   verticalOffset: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1 &934652750 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3206092112294254575, guid: 928eff03e7b3f3642aeed979f2b914e9, type: 3}
@@ -7528,6 +7634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InnerVoiceController
   innerVoiceSource: {fileID: 936080662}
+<<<<<<< Updated upstream
   clipA: {fileID: 0}
   clipB: {fileID: 0}
   clipC: {fileID: 0}
@@ -7537,6 +7644,13 @@ MonoBehaviour:
   returnButton: {fileID: 0}
   canvasFollower: {fileID: 0}
   charSelectManager: {fileID: 0}
+=======
+  clips:
+  - {fileID: 8300000, guid: c9ea8039657d1e94397e76e10b68f16e, type: 3}
+  - {fileID: 8300000, guid: 13f50b953757f204884ad65783c6b8a1, type: 3}
+  - {fileID: 8300000, guid: 76a4ce53bf6ac9c4081432a670fb8205, type: 3}
+  returnButton: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!1 &936894578
 GameObject:
   m_ObjectHideFlags: 0
@@ -7549,8 +7663,11 @@ GameObject:
   - component: {fileID: 936894581}
   - component: {fileID: 936894580}
   - component: {fileID: 936894579}
+<<<<<<< Updated upstream
   - component: {fileID: 936894583}
   - component: {fileID: 936894584}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: 2
   m_TagString: Untagged
@@ -7647,6 +7764,7 @@ RectTransform:
   m_AnchoredPosition: {x: -2.644, y: 1.507}
   m_SizeDelta: {x: 700, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
 --- !u!114 &936894583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7696,6 +7814,8 @@ MonoBehaviour:
   responseClip: {fileID: 0}
   canvasFollower: {fileID: 936894583}
   charSelectManager: {fileID: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &959240431
 GameObject:
   m_ObjectHideFlags: 0
@@ -8368,6 +8488,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+<<<<<<< Updated upstream
 --- !u!1 &1011033348
 GameObject:
   m_ObjectHideFlags: 0
@@ -8607,6 +8728,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1021333117}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &1027162915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9069,6 +9192,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+<<<<<<< Updated upstream
 --- !u!1 &1112524149
 GameObject:
   m_ObjectHideFlags: 0
@@ -9157,6 +9281,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112524149}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1132945402
 GameObject:
   m_ObjectHideFlags: 0
@@ -9168,7 +9294,10 @@ GameObject:
   - component: {fileID: 1132945403}
   - component: {fileID: 1132945405}
   - component: {fileID: 1132945404}
+<<<<<<< Updated upstream
   - component: {fileID: 1132945406}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: C
   m_TagString: Untagged
@@ -9233,6 +9362,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132945402}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!225 &1132945406
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9435,6 +9565,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145128468}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1146370119
 GameObject:
   m_ObjectHideFlags: 0
@@ -9514,8 +9646,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 12, y: -13.9}
   m_SizeDelta: {x: 650, y: 246.3}
+=======
+  m_AnchoredPosition: {x: 12, y: 54}
+  m_SizeDelta: {x: 650, y: 107.7}
+>>>>>>> Stashed changes
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1179629849
 MonoBehaviour:
@@ -9796,8 +9933,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 0, y: 46.66}
   m_SizeDelta: {x: -40, y: -333.21}
+=======
+  m_AnchoredPosition: {x: 0, y: 68.70004}
+  m_SizeDelta: {x: -40, y: -377.3}
+>>>>>>> Stashed changes
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1234261263
 MonoBehaviour:
@@ -10400,6 +10542,7 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 1767192439, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
   m_PrefabInstance: {fileID: 1270895180}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &1281674249
 GameObject:
   m_ObjectHideFlags: 0
@@ -10521,6 +10664,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1281674249}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1284015311
 GameObject:
   m_ObjectHideFlags: 0
@@ -10658,6 +10803,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1284015311}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!1 &1309095848
 GameObject:
   m_ObjectHideFlags: 0
@@ -10783,6 +10929,8 @@ RectTransform:
   m_AnchoredPosition: {x: -1.939, y: 2.696}
   m_SizeDelta: {x: 700, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1311158884
 GameObject:
   m_ObjectHideFlags: 0
@@ -10883,7 +11031,10 @@ GameObject:
   - component: {fileID: 1319741360}
   - component: {fileID: 1319741359}
   - component: {fileID: 1319741358}
+<<<<<<< Updated upstream
   - component: {fileID: 1319741362}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: 4A
   m_TagString: Untagged
@@ -10980,6 +11131,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0.82000005, y: 1.507}
   m_SizeDelta: {x: 700, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
 --- !u!114 &1319741362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10996,6 +11148,8 @@ MonoBehaviour:
   distance: 2
   followSpeed: 5
   verticalOffset: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &1321810598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12103,6 +12257,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+<<<<<<< Updated upstream
 --- !u!1 &1403065211
 GameObject:
   m_ObjectHideFlags: 0
@@ -12191,6 +12346,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1403065211}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1416345257
 GameObject:
   m_ObjectHideFlags: 0
@@ -12723,7 +12880,10 @@ GameObject:
   - component: {fileID: 1436879813}
   - component: {fileID: 1436879812}
   - component: {fileID: 1436879811}
+<<<<<<< Updated upstream
   - component: {fileID: 1436879815}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: 6C
   m_TagString: Untagged
@@ -12820,6 +12980,7 @@ RectTransform:
   m_AnchoredPosition: {x: 3.928, y: 1.507}
   m_SizeDelta: {x: 700, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
 --- !u!114 &1436879815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12836,6 +12997,8 @@ MonoBehaviour:
   distance: 2
   followSpeed: 5
   verticalOffset: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1442984383
 GameObject:
   m_ObjectHideFlags: 0
@@ -12965,7 +13128,10 @@ GameObject:
   - component: {fileID: 1466940183}
   - component: {fileID: 1466940185}
   - component: {fileID: 1466940184}
+<<<<<<< Updated upstream
   - component: {fileID: 1466940186}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: A
   m_TagString: Untagged
@@ -13030,6 +13196,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466940182}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!225 &1466940186
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -13042,6 +13209,8 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1476845244
 GameObject:
   m_ObjectHideFlags: 0
@@ -13761,7 +13930,10 @@ GameObject:
   - component: {fileID: 1524482507}
   - component: {fileID: 1524482509}
   - component: {fileID: 1524482508}
+<<<<<<< Updated upstream
   - component: {fileID: 1524482510}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: Banner
   m_TagString: Untagged
@@ -13831,6 +14003,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524482506}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!114 &1524482510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13852,6 +14025,8 @@ MonoBehaviour:
   activeAlpha: 1
   inactiveAlpha: 0.3
   doneAlpha: 0.3
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1526472144
 GameObject:
   m_ObjectHideFlags: 0
@@ -14064,6 +14239,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542150548}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!1 &1557130698
 GameObject:
   m_ObjectHideFlags: 0
@@ -14201,6 +14377,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1557130698}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1568007379
 GameObject:
   m_ObjectHideFlags: 0
@@ -14210,6 +14388,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1568007381}
+<<<<<<< Updated upstream
+=======
+  - component: {fileID: 1568007380}
+>>>>>>> Stashed changes
   - component: {fileID: 1568007382}
   - component: {fileID: 1568007383}
   m_Layer: 0
@@ -14219,6 +14401,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
+=======
+--- !u!114 &1568007380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568007379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a8b1cb881a39d4fb61422b75495536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSelectManager
+  camObserver: {fileID: 1427799274}
+  camA: {fileID: 507066866}
+  camB: {fileID: 1339917849}
+  camC: {fileID: 1972856526}
+  camSonder: {fileID: 667133561}
+  transitionAudio: {fileID: 1568007382}
+  whooshClip: {fileID: 8300000, guid: aad803bf64a0c1649a3ee3eac5bf7ccf, type: 3}
+  returnButton: {fileID: 0}
+  botPanelController: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!4 &1568007381
 Transform:
   m_ObjectHideFlags: 0
@@ -14340,6 +14546,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1568007379}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: 80773c398a71c2e45a5866d9a0afa8a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
@@ -14417,6 +14624,17 @@ MonoBehaviour:
   fadeGroup: {fileID: 1135476350}
   fadeDuration: 1
   geminiApiKey: BURAYA_KEY_YAZ
+=======
+  m_Script: {fileID: 11500000, guid: d9791b1016571384097c05745bbcbdde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SonderVoiceoverController
+  camSonder: {fileID: 667133561}
+  sonderSource: {fileID: 1568007382}
+  sonderClip: {fileID: 8300000, guid: 051f15e9ac8ce3042b2c949e5010bd8a, type: 3}
+  fadeCanvas: {fileID: 0}
+  chatBotPanel: {fileID: 0}
+  fadeDuration: 1.5
+>>>>>>> Stashed changes
 --- !u!1 &1592493596
 GameObject:
   m_ObjectHideFlags: 0
@@ -14743,6 +14961,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8200141137519947833, guid: 928eff03e7b3f3642aeed979f2b914e9, type: 3}
+<<<<<<< Updated upstream
 --- !u!1 &1649986991
 GameObject:
   m_ObjectHideFlags: 0
@@ -14880,6 +15099,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649986991}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1680685920
 GameObject:
   m_ObjectHideFlags: 0
@@ -14891,7 +15112,10 @@ GameObject:
   - component: {fileID: 1680685921}
   - component: {fileID: 1680685923}
   - component: {fileID: 1680685922}
+<<<<<<< Updated upstream
   - component: {fileID: 1680685924}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: B
   m_TagString: Untagged
@@ -14956,6 +15180,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680685920}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!225 &1680685924
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -15073,6 +15298,8 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 700, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1711285295
 GameObject:
   m_ObjectHideFlags: 0
@@ -15154,6 +15381,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717268133}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!1 &1736549181
 GameObject:
   m_ObjectHideFlags: 0
@@ -15229,6 +15457,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736549181}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes
 --- !u!4 &1747503742 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3217050527572341376, guid: 3b69b484a582ee548bf0adaf7c45a790, type: 3}
@@ -15636,7 +15866,10 @@ GameObject:
   - component: {fileID: 1829352017}
   - component: {fileID: 1829352019}
   - component: {fileID: 1829352018}
+<<<<<<< Updated upstream
   - component: {fileID: 1829352020}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: A
   m_TagString: Untagged
@@ -15701,6 +15934,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829352016}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!225 &1829352020
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -15713,11 +15947,14 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+=======
+>>>>>>> Stashed changes
 --- !u!4 &1847159615 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2774220344278030320, guid: edaebe2108ffd37449483c5fefe3e99a, type: 3}
   m_PrefabInstance: {fileID: 2094048644}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &1851952868
 GameObject:
   m_ObjectHideFlags: 0
@@ -15855,6 +16092,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851952868}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1865455587
 GameObject:
   m_ObjectHideFlags: 0
@@ -15889,8 +16128,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 12, y: -9.2}
   m_SizeDelta: {x: 650, y: 54.3}
+=======
+  m_AnchoredPosition: {x: 12, y: -43}
+  m_SizeDelta: {x: 650, y: 107.7}
+>>>>>>> Stashed changes
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1865455589
 MonoBehaviour:
@@ -16147,7 +16391,10 @@ GameObject:
   - component: {fileID: 1903619829}
   - component: {fileID: 1903619831}
   - component: {fileID: 1903619830}
+<<<<<<< Updated upstream
   - component: {fileID: 1903619832}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: Banner
   m_TagString: Untagged
@@ -16217,6 +16464,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903619828}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!114 &1903619832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16238,6 +16486,8 @@ MonoBehaviour:
   activeAlpha: 1
   inactiveAlpha: 0.3
   doneAlpha: 0.3
+=======
+>>>>>>> Stashed changes
 --- !u!4 &1906740355 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1670256625, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -16254,7 +16504,10 @@ GameObject:
   - component: {fileID: 1926731800}
   - component: {fileID: 1926731802}
   - component: {fileID: 1926731801}
+<<<<<<< Updated upstream
   - component: {fileID: 1926731803}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: A
   m_TagString: Untagged
@@ -16319,6 +16572,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926731799}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!225 &1926731803
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -16331,6 +16585,8 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1949095006
 GameObject:
   m_ObjectHideFlags: 0
@@ -16579,8 +16835,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 12, y: -3.5}
   m_SizeDelta: {x: 650, y: 228.4}
+=======
+  m_AnchoredPosition: {x: 12, y: 54}
+  m_SizeDelta: {x: 650, y: 107.7}
+>>>>>>> Stashed changes
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1956414103
 MonoBehaviour:
@@ -16684,6 +16945,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1956414101}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!1 &1968362575
 GameObject:
   m_ObjectHideFlags: 0
@@ -16760,6 +17022,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968362575}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1972856524
 GameObject:
   m_ObjectHideFlags: 0
@@ -16944,8 +17208,11 @@ GameObject:
   - component: {fileID: 2017615959}
   - component: {fileID: 2017615958}
   - component: {fileID: 2017615957}
+<<<<<<< Updated upstream
   - component: {fileID: 2017615961}
   - component: {fileID: 2017615962}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: "3ge\xE7i\u015F"
   m_TagString: Untagged
@@ -17042,6 +17309,7 @@ RectTransform:
   m_AnchoredPosition: {x: -1.006, y: 1.507}
   m_SizeDelta: {x: 700, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
 --- !u!114 &2017615961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17091,6 +17359,8 @@ MonoBehaviour:
   responseClip: {fileID: 8300000, guid: a9e62324d00aa3047a5181db362582e4, type: 3}
   canvasFollower: {fileID: 2017615961}
   charSelectManager: {fileID: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &2052419052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17995,7 +18265,10 @@ GameObject:
   - component: {fileID: 8359004282698231195}
   - component: {fileID: 4597793632050520958}
   - component: {fileID: 2216181129836872822}
+<<<<<<< Updated upstream
   - component: {fileID: 8359004282698231196}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: C
   m_TagString: Untagged
@@ -18077,8 +18350,11 @@ GameObject:
   - component: {fileID: 1099378859072585654}
   - component: {fileID: 1267339983213128997}
   - component: {fileID: 2074948906054336106}
+<<<<<<< Updated upstream
   - component: {fileID: 2074948906054336107}
   - component: {fileID: 2074948906054336108}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: 1-Guide
   m_TagString: Untagged
@@ -18105,6 +18381,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
+<<<<<<< Updated upstream
 --- !u!114 &2074948906054336107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18154,6 +18431,8 @@ MonoBehaviour:
   responseClip: {fileID: 0}
   canvasFollower: {fileID: 2074948906054336107}
   charSelectManager: {fileID: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!114 &2216181129836872822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18220,8 +18499,11 @@ GameObject:
   - component: {fileID: 6822649675144832480}
   - component: {fileID: 2648521399650013776}
   - component: {fileID: 4617064715874119772}
+<<<<<<< Updated upstream
   - component: {fileID: 6822649675144832481}
   - component: {fileID: 6822649675144832482}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: Banner
   m_TagString: Untagged
@@ -18491,7 +18773,10 @@ GameObject:
   - component: {fileID: 4652751234432043513}
   - component: {fileID: 8329011431865307663}
   - component: {fileID: 4495816754380737806}
+<<<<<<< Updated upstream
   - component: {fileID: 8329011431865307664}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: A
   m_TagString: Untagged
@@ -18901,6 +19186,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 176.2}
   m_SizeDelta: {x: 0, y: -352.5}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
 --- !u!114 &6822649675144832481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18934,6 +19220,8 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+=======
+>>>>>>> Stashed changes
 --- !u!222 &7379798059287989351
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18987,6 +19275,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4257993681127546449}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!225 &8329011431865307664
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -18999,6 +19288,8 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+=======
+>>>>>>> Stashed changes
 --- !u!224 &8359004282698231195
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19018,6 +19309,7 @@ RectTransform:
   m_AnchoredPosition: {x: 295, y: -1}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
 --- !u!225 &8359004282698231196
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -19030,6 +19322,8 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+=======
+>>>>>>> Stashed changes
 --- !u!114 &8507930379675009694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19098,7 +19392,10 @@ GameObject:
   - component: {fileID: 8718972536969939471}
   - component: {fileID: 3710701213758252618}
   - component: {fileID: 2857930129994857593}
+<<<<<<< Updated upstream
   - component: {fileID: 8942754076636149924}
+=======
+>>>>>>> Stashed changes
   m_Layer: 5
   m_Name: B
   m_TagString: Untagged
@@ -19106,6 +19403,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+<<<<<<< Updated upstream
 --- !u!225 &8942754076636149924
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -19118,6 +19416,8 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+=======
+>>>>>>> Stashed changes
 --- !u!222 &9001470579497057229
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19148,6 +19448,9 @@ SceneRoots:
   - {fileID: 700352173}
   - {fileID: 1436879814}
   - {fileID: 934556258}
+<<<<<<< Updated upstream
   - {fileID: 1309095853}
   - {fileID: 1135476349}
   - {fileID: 1684624553}
+=======
+>>>>>>> Stashed changes
