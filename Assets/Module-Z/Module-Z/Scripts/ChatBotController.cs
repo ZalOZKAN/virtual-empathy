@@ -1,95 +1,139 @@
+using System.Collections;
+using System.Text;
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
-
-[System.Serializable]
-public class QA
-{
-    public string question;
-    [TextArea(2, 4)]
-    public string answer;
-}
+using UnityEngine.Networking;
+using TMPro;
 
 public class ChatBotController : MonoBehaviour
 {
-    [Header("UI Referanslar")]
+    [Header("UI")]
     public TextMeshProUGUI botMessageText;
     public TextMeshProUGUI answerText;
     public TMP_InputField inputField;
-    public GameObject moduleMenuPanel;
-
-    [Header("Ses")]
-    public AudioSource botVoice;
-    public AudioClip botMessageClip;
-
-    [Header("Soru-Cevap")]
-    public QA[] presetQAs;
+    public Button sendButton;
+    public ScrollRect answerScroll;
 
     [Header("Preset Butonlar")]
     public Button[] presetButtons;
 
+    [Header("Sonraki Panel")]
+    public GameObject exitCanvas;
+
+    [Header("Gemini API")]
+    public string geminiApiKey = "BURAYA_API_KEY_YAZ";
+
+    private readonly string[] presetQuestions =
+    {
+        "Bu kişi neden 'iyiyim' dedi?",
+        "Toplantıda neden odaklanamadı?",
+        "Böyle birine nasıl yaklaşmak gerekir?",
+        "Bu davranışların altında ne olabilir?"
+    };
+
+    private const string SystemContext =
+        "Sen bir empati simülasyonu rehberisin. Kullanıcı az önce sosyal kaygı, " +
+        "zihinsel yük ve duygusal yük yaşayan üç farklı kişinin iç sesini deneyimledi. " +
+        "Sorulara kısa, içten ve psikolojik açıdan bilgili yanıtlar ver. " +
+        "Türkçe konuş. Maksimum 3 cümle.";
+
+    private bool isWaiting = false;
+
     void Awake()
     {
-        // Butonlari kod ile bagla
+        if (sendButton != null)
+            sendButton.onClick.AddListener(OnSendPressed);
+
         for (int i = 0; i < presetButtons.Length; i++)
         {
             int capture = i;
-            presetButtons[i].onClick.AddListener(
-                () => OnPresetSelected(capture));
+            if (presetButtons[i] != null)
+                presetButtons[i].onClick.AddListener(() => AskQuestion(presetQuestions[capture]));
         }
     }
 
     void OnEnable()
     {
-        botMessageText.text =
-            "Dışarıdan görülen her davranış, o kişinin iç dünyasını tam olarak yansıtmaz. " +
-            "Kısa cevaplar her zaman kabalık değildir. Dalgınlık her zaman " +
-            "umursamazlık değildir. Sessizlik her zaman ilgisizlik anlamına gelmez. " +
-            "Bazen bir insanın davranışlarının arkasında görünmeyen bir yorgunluk, " +
-            "bastırılmış bir duygu ya da açıklayamadığı bir zihinsel yük olabilir.";
-
-        if (botVoice != null && botMessageClip != null)
-        {
-            botVoice.clip = botMessageClip;
-            botVoice.Play();
-        }
-
-        if (answerText != null)
-            answerText.text = "";
-    }
-
-    public void OnPresetSelected(int index)
-    {
-        if (index < presetQAs.Length)
-            answerText.text = presetQAs[index].answer;
+        if (botMessageText != null)
+            botMessageText.text =
+                "Dışarıdan görülen her davranış, o kişinin iç dünyasını tam olarak yansıtmaz.\n" +
+                "Kısa cevaplar her zaman kabalık değildir.\n" +
+                "Sessizlik her zaman ilgisizlik anlamına gelmez.";
+        if (answerText  != null) answerText.text = "";
+        if (inputField  != null) inputField.text = "";
     }
 
     public void OnSendPressed()
     {
-        string q = inputField.text.Trim().ToLower();
-        if (string.IsNullOrEmpty(q)) return;
-        answerText.text = FindAnswer(q);
+        if (inputField == null) return;
+        string q = inputField.text.Trim();
+        if (string.IsNullOrEmpty(q) || isWaiting) return;
         inputField.text = "";
+        AskQuestion(q);
     }
 
-    string FindAnswer(string q)
+    void AskQuestion(string question)
     {
-        foreach (var qa in presetQAs)
-        {
-            string keyword = qa.question.Length >= 5
-                ? qa.question.Substring(0, 5).ToLower()
-                : qa.question.ToLower();
-            if (q.Contains(keyword))
-                return qa.answer;
-        }
-        return "Her davranışın arkasında görünmeyen bir neden olabilir. " +
-               "Empatiyle yaklaşmak her zaman iyi bir başlangıçtır.";
+        if (isWaiting) return;
+        if (answerText != null) answerText.text = "...";
+        StartCoroutine(CallGemini(question));
     }
 
-    public void GoToModuleMenu()
+    IEnumerator CallGemini(string question)
+    {
+        isWaiting = true;
+        if (sendButton != null) sendButton.interactable = false;
+
+        string url = "https://generativelanguage.googleapis.com/v1beta/models/" +
+                     "gemini-2.0-flash:generateContent?key=" + geminiApiKey;
+
+        string fullPrompt = SystemContext + "\n\nKullanıcı sorusu: " + question;
+        string jsonBody = "{\"contents\":[{\"parts\":[{\"text\":" +
+                          JsonUtility.ToJson(fullPrompt) + "}]}]}";
+        byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonBody);
+
+        using UnityWebRequest req = new UnityWebRequest(url, "POST");
+        req.uploadHandler   = new UploadHandlerRaw(bodyRaw);
+        req.downloadHandler = new DownloadHandlerBuffer();
+        req.SetRequestHeader("Content-Type", "application/json");
+
+        yield return req.SendWebRequest();
+
+        if (req.result == UnityWebRequest.Result.Success)
+        {
+            if (answerText != null)
+                answerText.text = ParseGeminiResponse(req.downloadHandler.text);
+            if (answerScroll != null)
+            { Canvas.ForceUpdateCanvases(); answerScroll.verticalNormalizedPosition = 1f; }
+        }
+        else
+        {
+            if (answerText != null)
+                answerText.text = "Bağlantı hatası. Lütfen tekrar deneyin.";
+            Debug.LogWarning("[ChatBot] Gemini API hatası: " + req.error);
+        }
+
+        isWaiting = false;
+        if (sendButton != null) sendButton.interactable = true;
+    }
+
+    string ParseGeminiResponse(string json)
+    {
+        try
+        {
+            int textIdx = json.IndexOf("\"text\":");
+            if (textIdx < 0) return "Yanıt alınamadı.";
+            int start = json.IndexOf("\"", textIdx + 7) + 1;
+            int end   = json.IndexOf("\"", start);
+            string raw = json.Substring(start, end - start);
+            return raw.Replace("\\n", "\n").Replace("\\\"", "\"");
+        }
+        catch { return "Yanıt işlenemedi."; }
+    }
+
+    public void GoToExit()
     {
         gameObject.SetActive(false);
-        if (moduleMenuPanel != null)
-            moduleMenuPanel.SetActive(true);
+        if (exitCanvas != null) exitCanvas.SetActive(true);
     }
-}   
+}
